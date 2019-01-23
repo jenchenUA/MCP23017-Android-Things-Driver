@@ -1,0 +1,56 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion DEFAULT_COMPILE_SDK_VERSION
+
+    defaultConfig {
+        minSdkVersion DEFAULT_MIN_SDK_VERSION
+        targetSdkVersion DEFAULT_TARGET_SDK_VERSION
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    bintrayRepo = 'repo'
+    bintrayName = 'mcp23017'
+    publishedGroupId = 'com.ua.jenchen.drivers.mcp23017'
+    libraryName = 'mcp23017-driver'
+    artifact = 'mcp23017'
+    libraryDescription = 'Adds support GPIO expander MCP23017 to Android Things'
+    siteUrl = 'https://github.com/jenchenUA/MCP23017-Android-Things-Driver'
+    gitUrl = 'https://github.com/jenchenUA/MCP23017-Android-Things-Driver.git'
+    libraryVersion = ARTIFACT_VERSION
+    developerId = 'jenchenua'
+    developerName = 'Eugene'
+    developerEmail = 'eugene.zadoyannyy@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+dependencies {
+    compileOnly 'com.google.android.things:androidthings:1.0'
+    implementation 'com.android.support:support-annotations:27.1.0'
+    testImplementation 'com.google.android.things:androidthings:1.0'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.6'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.6'
+}
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
