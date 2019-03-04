@@ -1,11 +1,8 @@
 {
   "title": "MCP23017 Driver",
   "category": "GPIO expander",
-  "published-jar": {
-    "location": "https://github.com/jenchenUA/MCP23017-Android-Things-Driver/releases/tag/v.1.0"
-  },
   "published-maven": {
-    "maven-url": "https://bintray.com/beta/#/jenchenua/repo/mcp23017",
+    "maven-url": "https://bintray.com/jenchenua/repo/mcp23017",
     "groupid": "com.ua.jenchen.drivers.mcp23017",
     "artifactid": "mcp23017"
   },
