@@ -2,7 +2,7 @@
   "title": "MCP23017 Driver",
   "category": "GPIO expander",
   "published-maven": {
-    "maven-url": "https://bintray.com/jenchenua/repo/mcp23017",
+    "maven-url": "https://dl.bintray.com/jenchenua/repo",
     "groupid": "com.ua.jenchen.drivers.mcp23017",
     "artifactid": "mcp23017"
   },
